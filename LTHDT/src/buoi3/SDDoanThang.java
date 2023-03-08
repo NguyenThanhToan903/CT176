@@ -3,7 +3,7 @@ package buoi3;
 import buoi2.Diem;
 
 public class SDDoanThang {
-
+	
 	public static void main(String[] args) {
 		Diem A = new Diem(2,5);
 		A.khoangCach();
@@ -21,7 +21,6 @@ public class SDDoanThang {
 		CD.nhap();
 		CD.doDai();
 		System.out.println("Do dai CD la : " +  CD.doDai());
-		
+		System.out.println("Goc CD voi Ox la : " +  CD.goc()+"do.");
 	}
-
 }

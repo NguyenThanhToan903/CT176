@@ -1,77 +1,47 @@
 package buoi3;
 
-import java.util.Scanner;
-
 import buoi2.Diem;
 
 public class DoanThang {
-	
 	private Diem d1, d2;
-	Scanner sc = new Scanner(System.in);
 	
 	public DoanThang() {
 		d1 = new Diem();
 		d2 = new Diem();
 	}
-	
-	public DoanThang(Diem x, Diem y) {
-		d1 = new Diem(x);
-		d2 = new Diem(y);
+	public DoanThang(Diem A, Diem B) {
+		d1 = new Diem(A);
+		d2 = new Diem(B);
 	}
-	
-	public DoanThang(DoanThang d3) {
-		d1 = new Diem(d3.d1);
-		d2 = new Diem(d3.d2);
+	public DoanThang(int ax, int ay, int bx, int by) {
+		d1 = new Diem(ax, ay);
+		d2 = new Diem(bx, by);
 	}
-	
-	public void nhap() {
-		System.out.println("Nhap toa do cho diem thu 1:");
-		d1.nhapDiem();
-		System.out.println("Nhap toa do cho diem thu 2:");
-		d2.nhapDiem();
+	public void nhap(){
+		System.out.println("Nhap toa do d1: ");d1.nhapDiem();
+		System.out.println("Nhap toa do d2: ");d2.nhapDiem();
+		
 	}
-	
+	public void in() {
+		System.out.println("["+d1+","+d2+"]");
+		
+	}
 	public String toString() {
-		return "[" + d1 + "," + d2 + "]";
+		return "["+d1+","+d2+"]";
 	}
-	
 	public void tinhTien(int dx, int dy) {
-		d1.tTien(dx, dx);
+		d1.tTien(dx, dy);
 		d2.tTien(dx, dy);
 	}
-	
 	public float doDai() {
 		return d1.khoangCach(d2);
 	}
-	
-	
-	
-	
-	
-	
-	
+	public double goc() {
+		float dx, dy ;
+		dx = Math.abs(d2.giaTriX() - d1.giaTriX());
+		dy = Math.abs(d2.giaTriY() - d2.giaTriY());
+		return (Math.toDegrees(Math.atan2(dx, dx)));
+	}
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

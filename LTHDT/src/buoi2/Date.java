@@ -2,6 +2,7 @@ package buoi2;
 
 import java.util.Scanner;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class Date {
 	private int d, m, y;
@@ -17,12 +18,11 @@ public class Date {
 		m = m1;
 		y = y1;
 	}
-	public  Date(Date Day) {
-		d = Day.d;
-		m = Day.m;
-		y = Day.y;
+	public  Date(Date D) {
+		d = D.d;
+		m = D.m;
+		y =D.y;
 	}
-	
 	
 	public void nhapDate() {
 		Scanner sc = new Scanner(System.in);
@@ -52,6 +52,9 @@ public class Date {
 	}
 	public void hienThi() {
 		System.out.println(d+"/"+m+"/"+y);
+	}
+	public String toString(){
+		return d+"/"+m+"/"+y;
 	}
 	public Date ngayHomSau() {
 		Date n = new Date(d, m, y);

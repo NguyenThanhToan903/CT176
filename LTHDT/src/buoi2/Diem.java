@@ -13,9 +13,9 @@ public class Diem {
 		x = x1;
 		y = y1;
 	}
-	public Diem(Diem d) {
-		x = d.x;
-		y = d.y;
+	public Diem(Diem A) {
+		x = A.x;
+		y = A.y;
 	}
 	public void nhapDiem() {
 		Scanner sc = new Scanner(System.in);
@@ -37,16 +37,14 @@ public class Diem {
 	public int giaTriY() {
 		return y;
 	}
+	public void tTien(int dx, int dy) {
+		x +=dx;
+		y +=dy;
+	}
 	public float khoangCach() {
 		return (float)Math.sqrt(x*x+y*y);
 	}
 	public float khoangCach(Diem d) {
 		return (float)Math.sqrt(Math.pow(x-d.x, 2)+Math.pow(x-d.y,2));
 	}
-	public void tTien(int dx, int dy) {
-		x +=dx;
-		y +=dy;
-	}
-	
-	
 }
