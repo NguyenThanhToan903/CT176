@@ -1,5 +1,7 @@
 package buoi3;
 
+import java.util.Scanner;
+
 import buoi2.Date;
 
 public class SinhVien {
@@ -30,5 +32,34 @@ public class SinhVien {
 			diem[i] = new String(S.diem[i]);
 		}
 	}
+	
+	private void nhap() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Nhap MSSV: ");
+		mSSV = sc.nextLine();
+		System.out.println("Nhap Ho Ten: ");
+		hoTen = sc.nextLine();
+		System.out.println("Nhap nam sinh: ");
+		ngSinh.nhapDate();
+		
+		
+	}
+	
+	private void nhapDiem() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Nhap so mon: ");
+		n = sc.nextInt();sc.NextLine();
+		for(int i=0; i<n; i++) {
+			System.out.println("Nhap mon thu "+(i+1)+": ");
+			mon[i] = sc.nextLine();
+			System.out.println("Nhap diem thu "+(i+1)+": ");
+			diem[i] = sc.nextLine();
+		}
+		
+	}
+	private String toString() {
+		return "MSSV: "+mSSV+"\nHo Ten: "+hoTen+"\nNgay Sinh";
+	}
+	
 	
 }
