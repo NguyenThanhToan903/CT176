@@ -2,7 +2,7 @@ package buoi2;
 
 import java.util.Scanner;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
+//import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class Date {
 	private int d, m, y;

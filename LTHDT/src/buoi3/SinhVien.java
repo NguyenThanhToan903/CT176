@@ -19,6 +19,9 @@ public class SinhVien {
 		mon = new String[max];
 		diem = new String[max];
 	}
+//	public SinhVien(String mssv, String ht, Date ngS, String mon1, ) {
+//		
+//	}
 	public SinhVien(SinhVien S) {
 		mSSV = new String(S.mSSV);
 		hoTen = new String(S.hoTen);
